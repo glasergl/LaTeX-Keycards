@@ -1,0 +1,16 @@
+%
+% #1 - title of the key card, i.e., the reference of the keycard's content
+% #2 - content of the key card
+%
+\newcommand{\keycard}[2]{
+\fbox{
+	\parbox{0.5\textwidth}{
+		{
+			\centering
+			\textbf{#1}
+			
+		}
+		#2
+	}
+}
+}
