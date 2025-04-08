@@ -1,17 +1,39 @@
+\newcounter{subsectionn}
+\newcounter{subsubsectionn}
+% this command evalutes to the value of the section label, depending on the section counters
+% intermediate counters are needed, because \thesubsection and \thesubsubsection dont evalute to just the number of the corresponding counter
+\newcommand{\sectionlabel}{%
+\setcounter{subsectionn}{\value{subsection}}%
+\setcounter{subsubsectionn}{\value{subsubsection}}%
+\ifnum\value{section}=0%
+{}%
+\else%
+\thesection%
+\fi%
+\ifnum\value{subsectionn}=0%
+{}%
+\else%
+{.\thesubsectionn}%
+\fi%
+\ifnum\value{subsubsectionn}=0%
+{}%
+\else%
+{.\thesubsubsectionn}%
+\fi%
+}
 %
 % #1 - title of the key card, i.e., the reference of the keycard's content
 % #2 - content of the key card
 %
-\newcommand{\keycard}[2]{
-\fbox{
-	\parbox[t][0.22\textheight][t]{0.45\textwidth}{
-		{
-			\centering
-			\textbf{#1}
-			
-		}
-		\vspace{0.5cm}
-		#2
-	}
-}
+\newcommand{\keycard}[2]{%
+\fbox{%
+	\parbox[t][0.223\textheight][t]{0.46\textwidth}{%
+		{%
+			\textbf{\sectionlabel\ #1}%
+		}%
+		
+		\vspace{0.5cm}%
+		#2%
+	}%
+}%
 }
