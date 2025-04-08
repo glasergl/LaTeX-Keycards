@@ -28,9 +28,8 @@
 \newcommand{\keycard}[2]{%
 \fbox{%
 	\parbox[t][0.223\textheight][t]{0.46\textwidth}{%
-		{%
-			\textbf{\sectionlabel\ #1}%
-		}%
+		\textbf{\sectionlabel\ #1}\\%
+		\hspace*{\fill}\rotatebox{180}{\textbf{\sectionlabel\ #1}}%
 		
 		\vspace{0.5cm}%
 		#2%
