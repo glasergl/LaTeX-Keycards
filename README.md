@@ -11,7 +11,6 @@ Note that the sizes are fix which should encourage to have small keycards.
 In case there is a need for a bigger keycard, use `\longkeycard{title}{content}` which works the same way, but uses the whole textwidth and dynamic height.
 Furthermore, there is a flag argument in the settings to change between the digital version and the version to print.
 The main difference is that the titles are rotated by 180° which allows bending the title to the back of the printed, cut out cards for learning.
-Of course you can also print the digital version and write the title on the cut out keycards yourself.
 
 ### Usage
 1. Download the repository content and follow the instructions in `main.tex`
