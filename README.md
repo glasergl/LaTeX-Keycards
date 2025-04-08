@@ -7,8 +7,10 @@ This LaTeX template implements the following requirements:
 The main command is `\keycard{title}{content}` which evaluates to an 1/8 block of the page (0.5 width, 0.25 height), i.e., 8 keycards per page.
 The title is the string used for learning by seeing it and guessing the corresponding content.
 The content can be any LaTeX, math, itemize etc.
+Note that the sizes are fix which should encourage to have small keycards.
+In case there is a need for a bigger keycard, use `\longkeycard{title}{content}` which works the same way, but uses the whole textwidth and dynamic height.
 Furthermore, there is a flag argument in the settings to change between the digital version and the version to print.
-The main difference is that the titles are rotated by 180° which allows bending the title to the back for learning.
+The main difference is that the titles are rotated by 180° which allows bending the title to the back of the printed, cut out cards for learning.
 Of course you can also print the digital version and write the title on the cut out keycards yourself.
 
 ### Usage
@@ -20,4 +22,4 @@ Of course you can also print the digital version and write the title on the cut 
 1. Start learning
 
 ### Examples
-An example for the digital version is [here](example-digital-format.pdf). An example how the corresponding version to print, cut and learn with looks like can be seen here [here](example-to-print.pdf).
+An example for the digital version is [here](example-digital-format.pdf). An example how the corresponding version to print, cut and learn with looks like can be seen [here](example-to-print.pdf).
