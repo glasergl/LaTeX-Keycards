@@ -6,8 +6,11 @@ This LaTeX template implements the following requirements:
 
 ### Usage
 1. Download the repository content and follow the instructions in `main.tex`
-1. Print the PDF as A4 format without double page printing (don't forget setting the rotate flag before producing the PDF to print)
+1. Print the PDF as A4 format without double page printing (**don't forget setting the rotate flag before producing the PDF to print!**)
 1. Cut out the keycards with scissors
 1. Glue long keycards over multiple pages together, if needed
 1. Bend the title part of each keycard to the back
 1. Start learning
+
+### Examples
+An example for the digital version is [here](example-digital-format.pdf). An example how the corresponding version to print, cut and learn with looks like can be seen here [here](example-to-print.pdf).
