@@ -21,18 +21,34 @@
 {.\thesubsubsectionn}%
 \fi%
 }
+
+\newcommand{\keycardtitle}[1]{%
+	\textbf{\sectionlabel\ #1}\\%
+	\hspace*{\fill}\rotatebox{180}{\textbf{\sectionlabel\ #1}}%
+}
+
 %
 % #1 - title of the key card, i.e., the reference of the keycard's content
 % #2 - content of the key card
 %
 \newcommand{\keycard}[2]{%
-\fbox{%
-	\parbox[t][0.223\textheight][t]{0.46\textwidth}{%
-		\textbf{\sectionlabel\ #1}\\%
-		\hspace*{\fill}\rotatebox{180}{\textbf{\sectionlabel\ #1}}%
-		
-		\vspace{0.5cm}%
-		#2%
-	}%
+\parbox[t][0.248\textheight][t]{0.48\textwidth}{%
+	\keycardtitle{#1}%
+	
+	\vspace{0.5cm}%
+	#2%
 }%
+}
+
+\newcommand{\longkeycard}[2]{%
+\vspace{0.5cm}%
+\hrule%
+\vspace{0.5cm}%
+\keycardtitle{#1}%
+		
+\vspace{0.5cm}%
+#2%
+\vspace{0.5cm}%
+\hrule%
+\vspace{0.5cm}%
 }
