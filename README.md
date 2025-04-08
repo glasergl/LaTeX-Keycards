@@ -5,8 +5,9 @@ This LaTeX template implements the following requirements:
 - Keycards printable to be used to learn without any digital screens
 
 The main command is `\keycard{title}{content}` which evaluates to an 1/8 block of the page (0.5 width, 0.25 height), i.e., 8 keycards per page.
-The title of the page is the string used to learn by seeing it and guessing the corresponding content.
-There is a flag argument in the settings to change between the digital version and the version to print.
+The title is the string used for learning by seeing it and guessing the corresponding content.
+The content can be any LaTeX, math, itemize etc.
+Furthermore, there is a flag argument in the settings to change between the digital version and the version to print.
 The main difference is that the titles are rotated by 180° which allows bending the title to the back for learning.
 Of course you can also print the digital version and write the title on the cut out keycards yourself.
 
