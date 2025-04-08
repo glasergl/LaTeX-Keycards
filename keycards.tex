@@ -30,7 +30,7 @@
 %
 \newcommand{\keycardtitle}[1]{%
 	\ifnum\value{printTitleRotated}=1%
-		\hspace*{\fill}\rotatebox[origin=c]{180}{\parbox{0.48\textwidth}{\textbf{\sectionlabel\ #1}}}%
+		\hspace*{\fill}\rotatebox[origin=c]{180}{\parbox[t][][t]{0.48\textwidth}{\textbf{\sectionlabel\ #1}}}%
 	\else%
 		\textbf{\sectionlabel\ #1}%
 	\fi%

@@ -7,8 +7,12 @@
 
 \begin{document}
 \pagestyle{empty}
-\tableofcontents
-\newpage
+\ifnum\value{printTitleRotated}=1%
+{}%
+\else%
+	\tableofcontents%
+	\newpage%
+\fi%
 \newgeometry{lmargin={10pt},rmargin={10pt},tmargin={10pt},bmargin = {10pt}}
 
 % create keycards using \keycard{title}{content} or \longkeycard{title}{content}
