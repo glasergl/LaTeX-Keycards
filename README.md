@@ -8,5 +8,6 @@ This LaTeX template implements the following requirements:
 1. Download the repository content and follow the guide in `main.tex`
 1. Print the PDF as A4 format without double page printing
 1. Cut out the keycards with scissors
+1. Glue long keycards over multiple pages together, if needed
 1. Bend the title part of each keycard to the back
 1. Start learning

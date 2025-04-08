@@ -1,7 +1,9 @@
-\newcounter{subsectionn}
-\newcounter{subsubsectionn}
+%
 % this command evalutes to the value of the section label, depending on the section counters
 % intermediate counters are needed, because \thesubsection and \thesubsubsection dont evalute to just the number of the corresponding counter
+%
+\newcounter{subsectionn}
+\newcounter{subsubsectionn}
 \newcommand{\sectionlabel}{%
 \setcounter{subsectionn}{\value{subsection}}%
 \setcounter{subsubsectionn}{\value{subsubsection}}%
@@ -22,9 +24,16 @@
 \fi%
 }
 
+%
+% this command evaluates to the title, given the title name, besides, the title is rotated depending on the counter flag
+% #1 - title
+%
 \newcommand{\keycardtitle}[1]{%
-	\textbf{\sectionlabel\ #1}\\%
-	\hspace*{\fill}\rotatebox{180}{\textbf{\sectionlabel\ #1}}%
+	\ifnum\value{printTitleRotated}=1%
+		\hspace*{\fill}\rotatebox[origin=c]{180}{\textbf{\sectionlabel\ #1}}%
+	\else%
+		\textbf{\sectionlabel\ #1}%
+	\fi%
 }
 
 %
@@ -32,14 +41,17 @@
 % #2 - content of the key card
 %
 \newcommand{\keycard}[2]{%
-\parbox[t][0.248\textheight][t]{0.48\textwidth}{%
-	\keycardtitle{#1}%
+\parbox[c][0.248\textheight][c]{0.48\textwidth}{%
+	\keycardtitle{#1}
 	
 	\vspace{0.5cm}%
-	#2%
+	#2% 
 }%
 }
 
+%
+% Behaves similar as \keycard with the difference that the given content may span the whole text widht and also multiple pages
+%
 \newcommand{\longkeycard}[2]{%
 \vspace{0.5cm}%
 \hrule%
