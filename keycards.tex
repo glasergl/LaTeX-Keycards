@@ -2,40 +2,43 @@
 % this command evalutes to the value of the section label, depending on the section counters
 % intermediate counters are needed, because \thesubsection and \thesubsubsection dont evalute to just the number of the corresponding counter
 %
-\newcounter{subsectionn}
-\newcounter{subsubsectionn}
+\newcounter{subsectiontmp}
+\newcounter{subsubsectiontmp}
 \newcommand{\sectionlabel}{%
-\setcounter{subsectionn}{\value{subsection}}%
-\setcounter{subsubsectionn}{\value{subsubsection}}%
+\setcounter{subsectiontmp}{\value{subsection}}%
+\setcounter{subsubsectiontmp}{\value{subsubsection}}%
 \ifnum\value{section}=0%
 {}%
 \else%
 \thesection%
 \fi%
-\ifnum\value{subsectionn}=0%
+\ifnum\value{subsectiontmp}=0%
 {}%
 \else%
-{.\thesubsectionn}%
+{.\thesubsectiontmp}%
 \fi%
-\ifnum\value{subsubsectionn}=0%
+\ifnum\value{subsubsectiontmp}=0%
 {}%
 \else%
-{.\thesubsubsectionn}%
+{.\thesubsubsectiontmp}%
 \fi%
 }
 
 %
-% this command evaluates to the title, given the title name, besides, the title is rotated depending on the counter flag
+% this command evaluates to the title, given the title name, it is rotated depending on the counter flag
+%
 % #1 - title
 %
 \newcommand{\keycardtitle}[1]{%
-	\ifnum\value{printTitleRotated}=1%
+	\ifnum\value{printVersion}=1%
 		\hspace*{\fill}\rotatebox[origin=c]{180}{\parbox[t][][t]{0.48\textwidth}{\textbf{\sectionlabel\ #1}}}%
 	\else%
 		\textbf{\sectionlabel\ #1}%
 	\fi%
 }
 
+%
+% Parbox with approximately 0.5 textwidth and 0.25 text height that displays the given title and content
 %
 % #1 - title of the key card, i.e., the reference of the keycard's content
 % #2 - content of the key card
@@ -50,7 +53,7 @@
 }
 
 %
-% Behaves similar as \keycard with the difference that the given content may span the whole text widht and also multiple pages
+% Behaves similar as \keycard with the difference that the given content may span the whole text width and also multiple pages
 %
 \newcommand{\longkeycard}[2]{%
 \vspace{0.5cm}%

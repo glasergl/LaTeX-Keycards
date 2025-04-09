@@ -1,6 +1,11 @@
-\newcounter{printTitleRotated}
-\setcounter{printTitleRotated}{0} % set to 1 to print the title rotated, necessary for folding the printed version. For the digital version, printing the title normally is better, i.e., set to 0.
+% counter variable to control whether the digital version or the printable version should be produced
+\newcounter{printVersion}
+\setcounter{printVersion}{0} % set to 1 for the print version, e.g., rotates the titles for folding and removes the table of contents. For the digital version set to 0.
+
+% setting this to > 0 may screw up the layout
 \setlength{\parindent}{0cm}
+
+% add some metadata to the key card document (not visible for the print version)
 \title{Subject}
 \author{Max Mustermann}
 \date{\today}

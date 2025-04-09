@@ -7,23 +7,30 @@
 
 \begin{document}
 \pagestyle{empty}
-\ifnum\value{printTitleRotated}=1%
+\ifnum\value{printVersion}=1%
 {}%
 \else%
 	\maketitle
+	\thispagestyle{empty}
 	\tableofcontents%
 	\newpage%
 \fi%
 \newgeometry{lmargin={10pt},rmargin={10pt},tmargin={10pt},bmargin = {10pt}}
 
-% create keycards using \keycard{title}{content} or \longkeycard{title}{content}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% Start %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% a single keycard uses approximately 0.5 of text width and 0.25 of text height, i.e., 2 * 4 = 8 keycards fit on a page
-% a longkeycard takes the full width, has dynamic height and allows page breaks
-% ideally, only use \keycard to keep the amount of information to learn per keycard low, nevertheless, e.g., using images to learn, might require a bigger keycard, i.e., use \longkeycard
-% after the first keycard (not long keycard), there must be a \hfill and at most one new line (if there will be another keycard). After the second keycard of a line (if exists), there must be two linebreaks, i.e., an empty line, such that latex properly goes into the next line.
 
-% use ksection, ksubsection and ksubsubsection for grouping keycards, the sections wont be visible in the text, but in the table of contents, as well as the numbers in the keycard title.
+% Create keycards using \keycard{title}{content} or \longkeycard{title}{content}
+
+% A single keycard uses approximately 0.5 of text width and 0.25 of text height, i.e., 2 * 4 = 8 keycards fit on a page
+% A longkeycard takes the full width, has dynamic height and allows page breaks
+% Ideally, only use \keycard to keep the amount of information to learn per keycard low. Nevertheless, e.g., using images to learn, might require a bigger keycard, i.e., use \longkeycard.
+
+% After the first keycard (not long keycard) of a line, there must be a \hfill and at most one new line. Then add the second keycard for the line. After the second keycard of a line (if exists), there must be two linebreaks, i.e., an empty line, such that LaTeX properly goes into the next line.
+
+% Use \ksection, \ksubsection and \ksubsubsection for grouping keycards. The sections wont be visible in the text, but in the table of contents, as well as the numbers in the keycard title.
 
 \ksection{My First Section}
 \ksubsection{My First Subsection}
@@ -85,13 +92,5 @@
 \keycard{Test Title}{
 	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 }
-\hfill
-\keycard{Test Title}{
-	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-}
 
-\ksection{Last Section}
-\keycard{Test Title}{
-	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-}
 \end{document}
