@@ -21,4 +21,4 @@ The main difference is that the titles are rotated by 180° which allows bending
 1. Start learning
 
 ### Examples
-An example for the digital version is [here](example-digital-format.pdf). An example how the corresponding version to print, cut and learn with looks like can be seen [here](example-to-print.pdf).
+An example for the digital version is [here](examples/example-digital-version.pdf). An example how the corresponding version to print, cut and learn with looks like can be seen [here](examples/example-print-version.pdf).
