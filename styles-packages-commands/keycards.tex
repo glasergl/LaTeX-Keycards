@@ -43,13 +43,19 @@
 % #1 - title of the key card, i.e., the reference of the keycard's content
 % #2 - content of the key card
 %
+\newcounter{keycardCounter}%
+\setcounter{keycardCounter}{0}%
 \newcommand{\keycard}[2]{%
 \parbox[t][0.248\textheight][t]{0.48\textwidth}{%
 	\keycardtitle{#1}
 	
 	\vspace{0.5cm}%
-	#2% 
+	#2%
 }%
+\ifthenelse{\not\isodd{\value{keycardCounter}}}
+{\hfill}
+{\\}
+\addtocounter{keycardCounter}{1}
 }
 
 %
@@ -66,4 +72,7 @@
 \vspace{0.5cm}%
 \hrule%
 \vspace{0.5cm}%
+\ifthenelse{\isodd{\value{keycardCounter}}}
+{\addtocounter{keycardCounter}{1}}
+{\addtocounter{keycardCounter}{2}}
 }
