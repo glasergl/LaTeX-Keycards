@@ -28,7 +28,8 @@
 % A longkeycard takes the full width, has dynamic height and allows page breaks
 % Ideally, only use \keycard to keep the amount of information to learn per keycard low. Nevertheless, e.g., using images to learn, might require a bigger keycard, i.e., use \longkeycard.
 
-% After the first keycard (not long keycard) of a line, there must be a \hfill and at most one new line. Then add the second keycard for the line. After the second keycard of a line (if exists), there must be two linebreaks, i.e., an empty line, such that LaTeX properly goes into the next line.
+% You need to be careful when adding line breaks between key cards, because it may break the layout.
+% Ideally use the comment symbol % to remove line breaks
 
 % Use \ksection, \ksubsection and \ksubsubsection for grouping keycards. The sections wont be visible in the text, but in the table of contents, as well as the numbers in the keycard title.
 
