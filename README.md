@@ -27,5 +27,6 @@ One page of an example PDF for the final version to print is depicted in the fol
 <p align="center">
 <img src="examples/example.png" width="1000"/>
 </p>
+
 An example for the digital version PDF is [here](examples/example-digital-version.pdf).
 The corresponding version to print, cut and learn with looks like can be seen [here](examples/example-print-version.pdf).
