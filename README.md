@@ -23,4 +23,9 @@ Finally, at the end the total number of key cards is displayed.
 1. Start learning
 
 ### Examples
-An example for the digital version is [here](examples/example-digital-version.pdf). An example how the corresponding version to print, cut and learn with looks like can be seen [here](examples/example-print-version.pdf).
+One page of an example PDF for the final version to print is depicted in the following figure.
+<p align="center">
+<img src="examples/example.png" width="1000"/>
+</p>
+An example for the digital version PDF is [here](examples/example-digital-version.pdf).
+The corresponding version to print, cut and learn with looks like can be seen [here](examples/example-print-version.pdf).
