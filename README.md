@@ -12,6 +12,8 @@ In case there is a need for a bigger keycard, use `\longkeycard{title}{content}`
 Furthermore, there is a flag argument in the settings to change between the digital version and the version to print.
 The main difference is that the titles are rotated by 180° which allows bending the title to the back of the printed, cut out cards for learning.
 
+Finally, at the end the total number of key cards is displayed.
+
 ### Usage
 1. Download the repository content and follow the instructions in `main.tex`
 1. Print the PDF as A4 format without double page printing (**don't forget to set the rotate flag before producing the PDF to print!**)
