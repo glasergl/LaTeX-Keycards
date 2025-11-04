@@ -76,3 +76,25 @@
 {\addtocounter{keycardCounter}{1}}
 {\addtocounter{keycardCounter}{2}}
 }
+
+%
+% Wraps the input content in an itemize environment for convenience
+%
+\newcommand{\ikeycard}[2]{
+\keycard{#1}{
+\begin{itemize}
+#2
+\end{itemize}
+}
+}
+
+%
+% Wraps the input content in an enumerate environment for convenience
+%
+\newcommand{\ekeycard}[2]{
+\keycard{#1}{
+\begin{enumerate}
+#2
+\end{enumerate}
+}
+}
