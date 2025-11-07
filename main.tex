@@ -5,6 +5,12 @@
 \input{styles-packages-commands/customsectioning}
 \input{styles-packages-commands/keycards}
 
+\ifnum\value{printVersion}=1%
+{}%
+\else%
+	\renewcommand{\familydefault}{\sfdefault}
+\fi%
+
 \begin{document}
 \pagestyle{empty}
 \ifnum\value{printVersion}=1%
